@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6D2C504B-42D5-4149-A5F8-14BF6E39F690</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MatriculaFacil</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E49DA3E16FA2414E6FCC984B05758DD4EF82F4CE</key>
+		<string>https://github.com/andresbn/MatriculaFacil.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Implementacion/MatriculaFacil/MatriculaFacil.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E49DA3E16FA2414E6FCC984B05758DD4EF82F4CE</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/andresbn/MatriculaFacil.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E49DA3E16FA2414E6FCC984B05758DD4EF82F4CE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E49DA3E16FA2414E6FCC984B05758DD4EF82F4CE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MatriculaFacil</string>
+		</dict>
+	</array>
+</dict>
+</plist>
