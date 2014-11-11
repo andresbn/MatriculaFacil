@@ -1,0 +1,56 @@
+body{
+    background-image: url('../imagenes/fondo.png');
+    border:red;
+    width: 80%;
+    margin: 0 auto;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#Contenedor{
+    //background-color:black;
+}
+#Cabecera{
+    //background-color:#E5BC7A;
+    height:30%;
+    margin-top: 10px;
+    text-align: center;
+}
+/*#menu{
+        height:10%;
+        background-color:#C8CACC;
+}*/
+#MenusLaterales{
+    height:50%;
+    //background-color:#BDD2EF;
+    float:left;
+    width:20%;
+}
+#ContenidoCentral{
+    min-height: 500px;
+    height:50%;
+    //background-color:#DAF7E2;
+    float:right;
+    width:79%;
+    margin-top: 20px;
+}
+#pie{
+    height:20%;
+    background-color:#D3D1C1;
+    clear:both;
+}
+#MensajeBienvenida {
+    
+}
+#footer{
+    text-align:center;
+    padding:10px;
+    margin:0;
+    border-top:1px solid #ddd;
+    color:#999;
+    font-size:0.8em;
+    text-shadow:0px 1px 1px #fff;
+    position: relative;
+    top:0;
+    left:0;
+    //background:#fff;
+}
