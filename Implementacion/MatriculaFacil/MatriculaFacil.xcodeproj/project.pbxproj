@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		386D0A5B1A0ECFA60046A3F9 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 386D0A5A1A0ECFA60046A3F9 /* LoginVC.m */; };
 		386D0A5F1A0ED25C0046A3F9 /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 386D0A5E1A0ED25C0046A3F9 /* MainVC.m */; };
+		3871ECC01A1182B500A61B38 /* SeccionesTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3871ECBF1A1182B500A61B38 /* SeccionesTVC.m */; };
+		3871ECC31A1182D700A61B38 /* SeccionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3871ECC21A1182D700A61B38 /* SeccionCell.m */; };
+		3871ECC61A1186B000A61B38 /* Seccion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3871ECC51A1186B000A61B38 /* Seccion.m */; };
 		38CC9E891A06E86900CE8C52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CC9E881A06E86900CE8C52 /* main.m */; };
 		38CC9E8C1A06E86900CE8C52 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CC9E8B1A06E86900CE8C52 /* AppDelegate.m */; };
 		38CC9E921A06E86900CE8C52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38CC9E901A06E86900CE8C52 /* Main.storyboard */; };
@@ -24,6 +27,7 @@
 		38E1C1931A100083004DE581 /* ListCursoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E1C1921A100083004DE581 /* ListCursoTVC.m */; };
 		38E1C1971A100473004DE581 /* ListCursoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E1C1961A100473004DE581 /* ListCursoCell.m */; };
 		38E1C19A1A10097D004DE581 /* Curso.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E1C1991A10097D004DE581 /* Curso.m */; };
+		38E1C1A01A10607D004DE581 /* CursosTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E1C19F1A10607D004DE581 /* CursosTVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +45,12 @@
 		386D0A5A1A0ECFA60046A3F9 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
 		386D0A5D1A0ED25C0046A3F9 /* MainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainVC.h; sourceTree = "<group>"; };
 		386D0A5E1A0ED25C0046A3F9 /* MainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainVC.m; sourceTree = "<group>"; };
+		3871ECBE1A1182B500A61B38 /* SeccionesTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeccionesTVC.h; sourceTree = "<group>"; };
+		3871ECBF1A1182B500A61B38 /* SeccionesTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeccionesTVC.m; sourceTree = "<group>"; };
+		3871ECC11A1182D700A61B38 /* SeccionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeccionCell.h; sourceTree = "<group>"; };
+		3871ECC21A1182D700A61B38 /* SeccionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeccionCell.m; sourceTree = "<group>"; };
+		3871ECC41A1186B000A61B38 /* Seccion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Seccion.h; sourceTree = "<group>"; };
+		3871ECC51A1186B000A61B38 /* Seccion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Seccion.m; sourceTree = "<group>"; };
 		38CC9E831A06E86900CE8C52 /* MatriculaFacil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatriculaFacil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38CC9E871A06E86900CE8C52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38CC9E881A06E86900CE8C52 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -68,6 +78,8 @@
 		38E1C1961A100473004DE581 /* ListCursoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListCursoCell.m; sourceTree = "<group>"; };
 		38E1C1981A10097D004DE581 /* Curso.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Curso.h; sourceTree = "<group>"; };
 		38E1C1991A10097D004DE581 /* Curso.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Curso.m; sourceTree = "<group>"; };
+		38E1C19E1A10607D004DE581 /* CursosTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CursosTVC.h; sourceTree = "<group>"; };
+		38E1C19F1A10607D004DE581 /* CursosTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CursosTVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +103,7 @@
 		386D0A571A0ECF390046A3F9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				38E1C19D1A1056F3004DE581 /* Secciones */,
 				38E1C1841A0FF29D004DE581 /* Cursos */,
 				386D0A5C1A0ED24D0046A3F9 /* Menu */,
 				386D0A581A0ECF800046A3F9 /* Login */,
@@ -199,11 +212,9 @@
 		38E1C1841A0FF29D004DE581 /* Cursos */ = {
 			isa = PBXGroup;
 			children = (
+				38E1C19C1A105656004DE581 /* Actualizar */,
+				38E1C19B1A10564B004DE581 /* Agregar */,
 				38E1C1941A100452004DE581 /* Listar */,
-				38E1C1851A0FF2CC004DE581 /* AddCursoVC.h */,
-				38E1C1861A0FF2CC004DE581 /* AddCursoVC.m */,
-				38E1C18B1A0FF2FE004DE581 /* UpdateCursoVC.h */,
-				38E1C18C1A0FF2FE004DE581 /* UpdateCursoVC.m */,
 			);
 			name = Cursos;
 			sourceTree = "<group>";
@@ -219,6 +230,39 @@
 				38E1C1991A10097D004DE581 /* Curso.m */,
 			);
 			name = Listar;
+			sourceTree = "<group>";
+		};
+		38E1C19B1A10564B004DE581 /* Agregar */ = {
+			isa = PBXGroup;
+			children = (
+				38E1C1851A0FF2CC004DE581 /* AddCursoVC.h */,
+				38E1C1861A0FF2CC004DE581 /* AddCursoVC.m */,
+			);
+			name = Agregar;
+			sourceTree = "<group>";
+		};
+		38E1C19C1A105656004DE581 /* Actualizar */ = {
+			isa = PBXGroup;
+			children = (
+				38E1C18B1A0FF2FE004DE581 /* UpdateCursoVC.h */,
+				38E1C18C1A0FF2FE004DE581 /* UpdateCursoVC.m */,
+			);
+			name = Actualizar;
+			sourceTree = "<group>";
+		};
+		38E1C19D1A1056F3004DE581 /* Secciones */ = {
+			isa = PBXGroup;
+			children = (
+				38E1C19E1A10607D004DE581 /* CursosTVC.h */,
+				38E1C19F1A10607D004DE581 /* CursosTVC.m */,
+				3871ECBE1A1182B500A61B38 /* SeccionesTVC.h */,
+				3871ECBF1A1182B500A61B38 /* SeccionesTVC.m */,
+				3871ECC11A1182D700A61B38 /* SeccionCell.h */,
+				3871ECC21A1182D700A61B38 /* SeccionCell.m */,
+				3871ECC41A1186B000A61B38 /* Seccion.h */,
+				3871ECC51A1186B000A61B38 /* Seccion.m */,
+			);
+			name = Secciones;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,10 +373,14 @@
 				386D0A5F1A0ED25C0046A3F9 /* MainVC.m in Sources */,
 				38E1C19A1A10097D004DE581 /* Curso.m in Sources */,
 				38E1C1931A100083004DE581 /* ListCursoTVC.m in Sources */,
+				3871ECC31A1182D700A61B38 /* SeccionCell.m in Sources */,
+				3871ECC01A1182B500A61B38 /* SeccionesTVC.m in Sources */,
 				38CC9E891A06E86900CE8C52 /* main.m in Sources */,
 				38E1C1971A100473004DE581 /* ListCursoCell.m in Sources */,
 				38E1C18D1A0FF2FE004DE581 /* UpdateCursoVC.m in Sources */,
+				3871ECC61A1186B000A61B38 /* Seccion.m in Sources */,
 				38E1C1821A0FEE65004DE581 /* WelcomeBanner.m in Sources */,
+				38E1C1A01A10607D004DE581 /* CursosTVC.m in Sources */,
 				386D0A5B1A0ECFA60046A3F9 /* LoginVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

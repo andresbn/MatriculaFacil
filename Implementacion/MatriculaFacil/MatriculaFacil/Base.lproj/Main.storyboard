@@ -222,6 +222,7 @@
                     <connections>
                         <outlet property="tableView" destination="Chp-ja-Iza" id="AEJ-Hl-hMx"/>
                         <segue destination="BTw-tN-AQh" kind="push" identifier="ListCurso" id="BgX-wI-p7q"/>
+                        <segue destination="SgB-gj-56W" kind="push" identifier="SeccionesHome" id="kYO-0z-bAd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lqz-Qf-edX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -380,7 +381,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="40G-WT-Ow8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1736" y="1084"/>
+            <point key="canvasLocation" x="2120" y="6"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BYl-SQ-D28">
@@ -448,7 +449,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cx4-SU-ZIG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1275" y="145"/>
+            <point key="canvasLocation" x="1247" y="-395"/>
         </scene>
         <!--Add CursoVC-->
         <scene sceneID="xpe-94-KfX">
@@ -603,7 +604,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXh-aw-qbU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1736" y="320"/>
+            <point key="canvasLocation" x="1686" y="-298"/>
         </scene>
         <!--List CursoTVC-->
         <scene sceneID="1b3-nY-Pjr">
@@ -629,7 +630,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Q5q-Rw-pvS">
-                                            <rect key="frame" x="24" y="17" width="276" height="28"/>
+                                            <rect key="frame" x="24" y="8" width="276" height="37"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="28"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -703,7 +704,197 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1275" y="740"/>
+            <point key="canvasLocation" x="1247" y="68"/>
+        </scene>
+        <!--CursosTVC-->
+        <scene sceneID="dYk-fA-e1U">
+            <objects>
+                <tableViewController id="SgB-gj-56W" customClass="CursosTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="125" sectionHeaderHeight="22" sectionFooterHeight="22" id="d7R-Gj-dbc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="W3l-Tk-Qqz">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="barTintColor" red="0.88202335860000003" green="0.88202335860000003" blue="0.88202335860000003" alpha="0.23999999999999999" colorSpace="calibratedRGB"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="Yd6-7y-ZPL" id="Fmk-ZA-5nc"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListCursoCell" rowHeight="125" id="6Fz-Ba-aUF" customClass="ListCursoCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Fz-Ba-aUF" id="YeL-7a-iNz">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sBs-2c-KZv">
+                                            <rect key="frame" x="24" y="8" width="276" height="37"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="28"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Codigo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WJr-eV-day">
+                                            <rect key="frame" x="24" y="53" width="141" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Creditos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xI9-lp-txi">
+                                            <rect key="frame" x="24" y="88" width="141" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Requisito" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wEH-uG-66V">
+                                            <rect key="frame" x="173" y="53" width="141" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ciclo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="559-p6-SHb">
+                                            <rect key="frame" x="173" y="88" width="141" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="ciclo" destination="559-p6-SHb" id="kuh-h6-tjd"/>
+                                    <outlet property="codigo" destination="WJr-eV-day" id="HgQ-Wm-QHT"/>
+                                    <outlet property="creditos" destination="xI9-lp-txi" id="ULa-q2-Sjx"/>
+                                    <outlet property="nombre" destination="sBs-2c-KZv" id="ftJ-S7-MCZ"/>
+                                    <outlet property="requisito" destination="wEH-uG-66V" id="WaG-Wn-4KF"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="PH5-It-sYe"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="Yd6-7y-ZPL" id="wSt-fk-8QN"/>
+                        <segue destination="Phe-4C-9GP" kind="push" identifier="SeccionesPorCurso" id="4UO-Ae-4bc"/>
+                    </connections>
+                </tableViewController>
+                <searchDisplayController id="Yd6-7y-ZPL">
+                    <connections>
+                        <outlet property="delegate" destination="SgB-gj-56W" id="u1J-Pi-2n6"/>
+                        <outlet property="searchBar" destination="W3l-Tk-Qqz" id="KOi-eH-6oa"/>
+                        <outlet property="searchContentsController" destination="SgB-gj-56W" id="TuC-tg-3hc"/>
+                        <outlet property="searchResultsDataSource" destination="SgB-gj-56W" id="bt0-2c-t0z"/>
+                        <outlet property="searchResultsDelegate" destination="SgB-gj-56W" id="aFI-T0-KSz"/>
+                    </connections>
+                </searchDisplayController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mb6-Fn-l3F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1247" y="706"/>
+        </scene>
+        <!--SeccionesTVC-->
+        <scene sceneID="yG8-aS-JQG">
+            <objects>
+                <tableViewController id="Phe-4C-9GP" customClass="SeccionesTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="224" sectionHeaderHeight="22" sectionFooterHeight="22" id="SKf-J7-A57">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="XAj-ts-Tcu">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="barTintColor" red="0.88202335860000003" green="0.88202335860000003" blue="0.88202335860000003" alpha="0.23999999999999999" colorSpace="calibratedRGB"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="N8N-fm-J2i" id="xXW-sK-H0f"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListCursoCell" rowHeight="225" id="2Wh-Ki-cDy" customClass="SeccionCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Wh-Ki-cDy" id="2w5-12-Erh">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profesor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JXN-XD-m4Z">
+                                            <rect key="frame" x="24" y="55" width="266" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Salon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="doa-XK-3NU">
+                                            <rect key="frame" x="24" y="85" width="276" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hora inicio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jyo-OP-Ae7">
+                                            <rect key="frame" x="24" y="115" width="266" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hora fin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ep3-uQ-xId">
+                                            <rect key="frame" x="24" y="145" width="266" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo de clase" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vtN-Gi-RKS">
+                                            <rect key="frame" x="24" y="175" width="266" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Codigo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="maV-m0-tTZ">
+                                            <rect key="frame" x="24" y="8" width="276" height="42"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="28"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="codigo" destination="maV-m0-tTZ" id="aDD-pp-R7N"/>
+                                    <outlet property="fin" destination="Ep3-uQ-xId" id="4hc-C6-gz6"/>
+                                    <outlet property="inicio" destination="Jyo-OP-Ae7" id="UEe-sZ-qwb"/>
+                                    <outlet property="profesor" destination="JXN-XD-m4Z" id="V0V-wi-L7c"/>
+                                    <outlet property="salon" destination="doa-XK-3NU" id="Nqk-uV-u5d"/>
+                                    <outlet property="tipo" destination="vtN-Gi-RKS" id="Cwu-SL-rSg"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="delegate" destination="Phe-4C-9GP" id="leG-be-zK9"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="lnT-ui-jwT">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0BP-Hi-eYH"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="N8N-fm-J2i" id="wyz-SQ-ZkC"/>
+                    </connections>
+                </tableViewController>
+                <searchDisplayController id="N8N-fm-J2i">
+                    <connections>
+                        <outlet property="delegate" destination="Phe-4C-9GP" id="SSr-RG-EU1"/>
+                        <outlet property="searchBar" destination="XAj-ts-Tcu" id="N2P-M4-ExD"/>
+                        <outlet property="searchContentsController" destination="Phe-4C-9GP" id="Xny-op-wpN"/>
+                        <outlet property="searchResultsDataSource" destination="Phe-4C-9GP" id="wiN-At-me3"/>
+                        <outlet property="searchResultsDelegate" destination="Phe-4C-9GP" id="ruu-28-BHD"/>
+                    </connections>
+                </searchDisplayController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jN7-gL-FSK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1664" y="706"/>
         </scene>
     </scenes>
     <resources>

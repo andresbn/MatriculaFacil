@@ -96,6 +96,10 @@
     
         [self performSegueWithIdentifier:@"ListCurso" sender:self];
     }
+    if (indexPath.row == 1) {
+        
+        [self performSegueWithIdentifier:@"SeccionesHome" sender:self];
+    }
 
 }
 
