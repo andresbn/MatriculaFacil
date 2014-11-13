@@ -8,6 +8,7 @@ package pe.com.core.testng.test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.testng.Assert;
 import java.util.List;
+import java.util.Random;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -33,8 +34,19 @@ public class CursoTest {
         System.out.println("Final de la Clase");
     }
 
-    @Test
-    public void saveCursoCorrecto() {
+    @Test(priority = 1)
+    public void listCurso() {
+        try {
+            List<Curso> listCursos = cursoDAO.list();
+            Assert.assertNotEquals(listCursos.size(), 0);
+        } catch (Exception e) {
+            e.printStackTrace();
+            Assert.fail("Fallo: " + e.getMessage());
+        }
+    }
+
+    @Test(priority = 0)
+    public void saveCurso() {
         try {
             Curso curso = new Curso();
             curso.setCiclo(6);
@@ -44,6 +56,17 @@ public class CursoTest {
             curso.setRequisitos("IHC y Dispositivos Moviles");
             cursoDAO.save(curso);
             Assert.assertNotEquals(curso.getIdCurso(), 0);
+        } catch (Exception e) {
+            e.printStackTrace();
+            Assert.fail("Fallo: " + e.getMessage());
+        }
+    }
+
+    @Test(priority = 2)
+    public void deleteCurso() {
+        try {
+            List<Curso> listCursos = cursoDAO.list();
+            Assert.assertTrue(cursoDAO.delete(listCursos.get(listCursos.size() - 1)));
         } catch (Exception e) {
             e.printStackTrace();
             Assert.fail("Fallo: " + e.getMessage());
