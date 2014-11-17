@@ -1,14 +1,16 @@
 //
-//  AddSeccionVC.h
+//  UpdateSeccionVC.h
 //  MatriculaFacil
 //
-//  Created by Alvaro Herrera Cotrina on 11/10/14.
+//  Created by Alvaro Herrera Cotrina on 11/17/14.
 //  Copyright (c) 2014 sKDevs. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import "Seccion.h"
 
-@interface AddSeccionVC : UIViewController<UITextFieldDelegate>
+@interface UpdateSeccionVC : UIViewController
+@property (nonatomic, strong) Seccion *sec;
 @property (weak, nonatomic) IBOutlet UILabel *CodigoLbl;
 @property (weak, nonatomic) IBOutlet UITextField *CodigoTxt;
 @property (weak, nonatomic) IBOutlet UILabel *ProfesorLbl;
@@ -22,5 +24,4 @@
 @property (weak, nonatomic) IBOutlet UILabel *TipoLbl;
 @property (weak, nonatomic) IBOutlet UITextField *TipoTxt;
 @property (strong, nonatomic) UITapGestureRecognizer *tap;
-
 @end

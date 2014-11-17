@@ -19,6 +19,7 @@
 		38CC9E941A06E86900CE8C52 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38CC9E931A06E86900CE8C52 /* Images.xcassets */; };
 		38CC9E971A06E86900CE8C52 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38CC9E951A06E86900CE8C52 /* LaunchScreen.xib */; };
 		38CC9EA31A06E86900CE8C52 /* MatriculaFacilTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CC9EA21A06E86900CE8C52 /* MatriculaFacilTests.m */; };
+		38DC969B1A1A5DCA00917B1E /* UpdateSeccionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DC969A1A1A5DCA00917B1E /* UpdateSeccionVC.m */; };
 		38E1C1771A0FD056004DE581 /* student.png in Resources */ = {isa = PBXBuildFile; fileRef = 38E1C1761A0FD056004DE581 /* student.png */; };
 		38E1C17B1A0FD1B8004DE581 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 38E1C17A1A0FD1B8004DE581 /* background.png */; };
 		38E1C17F1A0FE748004DE581 /* MainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E1C17E1A0FE748004DE581 /* MainCell.m */; };
@@ -65,6 +66,8 @@
 		38CC9E9C1A06E86900CE8C52 /* MatriculaFacilTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MatriculaFacilTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38CC9EA11A06E86900CE8C52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38CC9EA21A06E86900CE8C52 /* MatriculaFacilTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatriculaFacilTests.m; sourceTree = "<group>"; };
+		38DC96991A1A5DCA00917B1E /* UpdateSeccionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateSeccionVC.h; sourceTree = "<group>"; };
+		38DC969A1A1A5DCA00917B1E /* UpdateSeccionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateSeccionVC.m; sourceTree = "<group>"; };
 		38E1C1761A0FD056004DE581 /* student.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = student.png; sourceTree = "<group>"; };
 		38E1C17A1A0FD1B8004DE581 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		38E1C17D1A0FE748004DE581 /* MainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCell.h; sourceTree = "<group>"; };
@@ -214,6 +217,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		38DC96981A1A5DAA00917B1E /* UpdateSeccion */ = {
+			isa = PBXGroup;
+			children = (
+				38DC96991A1A5DCA00917B1E /* UpdateSeccionVC.h */,
+				38DC969A1A1A5DCA00917B1E /* UpdateSeccionVC.m */,
+			);
+			name = UpdateSeccion;
+			sourceTree = "<group>";
+		};
 		38E1C17C1A0FD652004DE581 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +292,7 @@
 		38E1C19D1A1056F3004DE581 /* Secciones */ = {
 			isa = PBXGroup;
 			children = (
+				38DC96981A1A5DAA00917B1E /* UpdateSeccion */,
 				3871ECC81A11BAB000A61B38 /* CrearSeccion */,
 				3871ECC71A1193B700A61B38 /* ListarSecciones */,
 			);
@@ -395,6 +408,7 @@
 				38E1C19A1A10097D004DE581 /* Curso.m in Sources */,
 				38E1C1931A100083004DE581 /* ListCursoTVC.m in Sources */,
 				3871ECC31A1182D700A61B38 /* SeccionCell.m in Sources */,
+				38DC969B1A1A5DCA00917B1E /* UpdateSeccionVC.m in Sources */,
 				3871ECC01A1182B500A61B38 /* SeccionesTVC.m in Sources */,
 				38CC9E891A06E86900CE8C52 /* main.m in Sources */,
 				38E1C1971A100473004DE581 /* ListCursoCell.m in Sources */,

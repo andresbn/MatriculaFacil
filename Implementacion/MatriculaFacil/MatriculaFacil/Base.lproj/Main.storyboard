@@ -147,12 +147,13 @@
                         <outlet property="PasswordTxt" destination="psQ-mg-9rt" id="hbI-dW-vOv"/>
                         <outlet property="UsuarioLbl" destination="RLC-hv-kFQ" id="8wl-95-oON"/>
                         <outlet property="UsuarioTxt" destination="19x-vi-Ilu" id="Ii7-k3-1Ml"/>
-                        <segue destination="enb-MY-OpC" kind="modal" identifier="LoginSuccess" id="tjD-xt-0Y5"/>
+                        <segue destination="enb-MY-OpC" kind="modal" identifier="LoginAdminSuccess" id="tjD-xt-0Y5"/>
+                        <segue destination="uoX-Ce-95s" kind="modal" identifier="LoginUserSuccess" id="grn-Fz-5be"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-234" y="286"/>
+            <point key="canvasLocation" x="-187" y="286"/>
         </scene>
         <!--MainVC-->
         <scene sceneID="DOa-Zu-IJV">
@@ -402,6 +403,30 @@
             </objects>
             <point key="canvasLocation" x="245" y="286"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="0qY-ew-A0x">
+            <objects>
+                <viewController id="4CD-rk-VhB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7YQ-cp-OUs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" id="kIP-l2-lhj">
+                                <rect key="frame" x="0.0" y="63" width="320" height="88"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <segue destination="sxX-zN-5K4" kind="embed" id="G1g-Eb-3za"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QQy-u6-mOz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j0X-vg-ffy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="436" y="1046"/>
+        </scene>
         <!--Welcome Banner-->
         <scene sceneID="KF7-53-uA5">
             <objects>
@@ -449,7 +474,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cx4-SU-ZIG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1247" y="-395"/>
+            <point key="canvasLocation" x="1247" y="-391"/>
         </scene>
         <!--Add CursoVC-->
         <scene sceneID="xpe-94-KfX">
@@ -793,7 +818,7 @@
                 </searchDisplayController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mb6-Fn-l3F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1247" y="706"/>
+            <point key="canvasLocation" x="1779" y="706"/>
         </scene>
         <!--SeccionesTVC-->
         <scene sceneID="yG8-aS-JQG">
@@ -813,7 +838,7 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListCursoCell" rowHeight="225" id="2Wh-Ki-cDy" customClass="SeccionCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ListCursoCell" rowHeight="225" id="2Wh-Ki-cDy" customClass="SeccionCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Wh-Ki-cDy" id="2w5-12-Erh">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -869,6 +894,7 @@
                                     <outlet property="profesor" destination="JXN-XD-m4Z" id="V0V-wi-L7c"/>
                                     <outlet property="salon" destination="doa-XK-3NU" id="Nqk-uV-u5d"/>
                                     <outlet property="tipo" destination="vtN-Gi-RKS" id="Cwu-SL-rSg"/>
+                                    <segue destination="vmo-28-ddg" kind="push" identifier="UpdateSeccion" id="hBn-y2-mmJ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -899,7 +925,7 @@
                 </searchDisplayController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jN7-gL-FSK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1664" y="706"/>
+            <point key="canvasLocation" x="2196" y="706"/>
         </scene>
         <!--Add SeccionVC-->
         <scene sceneID="82P-zs-Ghb">
@@ -924,7 +950,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IuN-5b-uAW">
-                                <rect key="frame" x="45" y="140" width="99" height="46"/>
+                                <rect key="frame" x="45" y="140" width="100" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Profesor:">
@@ -938,7 +964,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1jy-Vq-u7R">
-                                <rect key="frame" x="45" y="214" width="122" height="46"/>
+                                <rect key="frame" x="45" y="214" width="100" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Salón:">
@@ -952,7 +978,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="C7a-wi-ILT">
-                                <rect key="frame" x="45" y="285" width="99" height="46"/>
+                                <rect key="frame" x="45" y="285" width="100" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Inicio:">
@@ -966,7 +992,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yDC-RT-yh7">
-                                <rect key="frame" x="45" y="358" width="99" height="46"/>
+                                <rect key="frame" x="45" y="358" width="100" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Fin:">
@@ -998,7 +1024,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lBn-C6-eAl">
-                                <rect key="frame" x="45" y="430" width="99" height="46"/>
+                                <rect key="frame" x="45" y="430" width="100" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Tipo de clase:">
@@ -1011,7 +1037,7 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" id="4SJ-gT-DJC">
+                            <textField opaque="NO" clipsSubviews="YES" tag="300" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" id="4SJ-gT-DJC">
                                 <rect key="frame" x="45" y="474" width="230" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
@@ -1026,7 +1052,7 @@
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <outlet property="delegate" destination="HLj-M3-evl" id="vvn-rZ-Zc1"/>
+                                    <outlet property="delegate" destination="HLj-M3-evl" id="1P7-nW-Fad"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" id="5Sc-56-Atc">
@@ -1035,7 +1061,7 @@
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <outlet property="delegate" destination="HLj-M3-evl" id="spM-HP-mmb"/>
+                                    <outlet property="delegate" destination="HLj-M3-evl" id="R5S-oF-4eT"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" id="Hkd-BB-dmZ">
@@ -1048,24 +1074,286 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sHf-pQ-8As">
-                                <rect key="frame" x="72" y="512" width="177" height="55"/>
+                                <rect key="frame" x="70" y="512" width="177" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="32"/>
                                 <state key="normal" title="Crear">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="CrearCurso:" destination="HLj-M3-evl" eventType="touchUpInside" id="2A7-gt-iGW"/>
+                                    <action selector="CrearSeccion:" destination="HLj-M3-evl" eventType="touchUpInside" id="wbm-Zw-f3S"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="jgB-eh-k7T"/>
+                    <connections>
+                        <outlet property="CodigoLbl" destination="VWX-rK-3VK" id="1nk-1T-IPx"/>
+                        <outlet property="CodigoTxt" destination="aXa-9M-Mwr" id="gNh-4V-K4k"/>
+                        <outlet property="FinLbl" destination="yDC-RT-yh7" id="aGY-4G-sVn"/>
+                        <outlet property="FinTxt" destination="6hm-sB-2Y0" id="Iez-bG-sGd"/>
+                        <outlet property="InicioLbl" destination="C7a-wi-ILT" id="dWw-3Y-jdO"/>
+                        <outlet property="InicioTxt" destination="Hkd-BB-dmZ" id="tsG-i5-p8s"/>
+                        <outlet property="ProfesorLbl" destination="IuN-5b-uAW" id="tfv-nT-4s8"/>
+                        <outlet property="ProfesorTxt" destination="X6V-RQ-1yO" id="Wp0-9z-mCp"/>
+                        <outlet property="SalonLbl" destination="1jy-Vq-u7R" id="Gnf-9s-ouO"/>
+                        <outlet property="SalonTxt" destination="5Sc-56-Atc" id="HjA-IV-HOf"/>
+                        <outlet property="TipoLbl" destination="lBn-C6-eAl" id="HoR-Nq-J1D"/>
+                        <outlet property="TipoTxt" destination="4SJ-gT-DJC" id="lBj-dE-inP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CdG-bL-G0u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2120" y="706"/>
+            <point key="canvasLocation" x="2635" y="706"/>
+        </scene>
+        <!--Update SeccionVC-->
+        <scene sceneID="Qbf-VI-HRZ">
+            <objects>
+                <viewController id="vmo-28-ddg" customClass="UpdateSeccionVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LTa-tv-n4w">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lIn-dL-NlS">
+                                <rect key="frame" x="45" y="75" width="110" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Código">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="17" name="AvenirNextCondensed-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6kk-Hz-54L">
+                                <rect key="frame" x="45" y="140" width="100" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Profesor:">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="17" name="AvenirNextCondensed-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Y3d-Lv-ocB">
+                                <rect key="frame" x="45" y="214" width="100" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Salón:">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="17" name="AvenirNextCondensed-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R58-ie-hPZ">
+                                <rect key="frame" x="45" y="285" width="100" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Inicio:">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="17" name="AvenirNextCondensed-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fN5-7K-23O">
+                                <rect key="frame" x="45" y="358" width="100" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Fin:">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="17" name="AvenirNextCondensed-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" id="THk-2P-Gf1">
+                                <rect key="frame" x="45" y="112" width="230" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vmo-28-ddg" id="ms5-rT-Wn6"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" id="pxB-1t-blb">
+                                <rect key="frame" x="45" y="402" width="230" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vmo-28-ddg" id="UIz-1P-eUV"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="w6n-uj-FxT">
+                                <rect key="frame" x="45" y="430" width="100" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Tipo de clase:">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="17" name="AvenirNextCondensed-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" tag="300" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" id="DI1-UU-ZlD">
+                                <rect key="frame" x="45" y="474" width="230" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vmo-28-ddg" id="GQA-HY-pkb"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" id="5Eq-Zo-4Yt">
+                                <rect key="frame" x="45" y="186" width="230" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vmo-28-ddg" id="Rwk-CV-FTY"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" id="qbj-gK-Djd">
+                                <rect key="frame" x="45" y="257" width="230" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vmo-28-ddg" id="LIb-Wl-8Bk"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" id="Ofl-gH-JvE">
+                                <rect key="frame" x="45" y="328" width="230" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vmo-28-ddg" id="nu3-P7-hXw"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Hoc-dF-zx5">
+                                <rect key="frame" x="75" y="512" width="171" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="32"/>
+                                <state key="normal" title="Actualizar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ActualizarSeccion:" destination="vmo-28-ddg" eventType="touchUpInside" id="d3G-iv-dxc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mLq-bd-K5d"/>
+                    <connections>
+                        <outlet property="CodigoLbl" destination="lIn-dL-NlS" id="hsx-Vb-fwf"/>
+                        <outlet property="CodigoTxt" destination="THk-2P-Gf1" id="BaH-9G-Jth"/>
+                        <outlet property="FinLbl" destination="fN5-7K-23O" id="Hv8-8p-e18"/>
+                        <outlet property="FinTxt" destination="pxB-1t-blb" id="FZQ-De-dzE"/>
+                        <outlet property="InicioLbl" destination="R58-ie-hPZ" id="PDZ-0Y-aEh"/>
+                        <outlet property="InicioTxt" destination="Ofl-gH-JvE" id="iST-jX-aue"/>
+                        <outlet property="ProfesorLbl" destination="6kk-Hz-54L" id="bPQ-Hf-jze"/>
+                        <outlet property="ProfesorTxt" destination="5Eq-Zo-4Yt" id="A4X-tZ-sWI"/>
+                        <outlet property="SalonLbl" destination="Y3d-Lv-ocB" id="Qqf-Op-WLi"/>
+                        <outlet property="SalonTxt" destination="qbj-gK-Djd" id="fva-Et-zz2"/>
+                        <outlet property="TipoLbl" destination="w6n-uj-FxT" id="exd-je-nDI"/>
+                        <outlet property="TipoTxt" destination="DI1-UU-ZlD" id="vUW-W9-Ii3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="977-lJ-CJV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2635" y="1401"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gjA-1h-wUk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uoX-Ce-95s" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="SoQ-W8-dSs"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XOl-9J-IqW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4CD-rk-VhB" kind="relationship" relationship="rootViewController" id="IaF-h8-gDc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KPn-pQ-3C6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-14" y="1046"/>
+        </scene>
+        <!--Welcome Banner-->
+        <scene sceneID="8uO-80-giN">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="sxX-zN-5K4" customClass="WelcomeBanner" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ycy-qH-muk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3do-eT-LqW">
+                                <rect key="frame" x="16" y="14" width="288" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Bienvenido">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="18" name="AvenirNextCondensed-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cCl-6H-MO7">
+                                <rect key="frame" x="16" y="44" width="288" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Modo Alumno">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="18" name="AvenirNextCondensed-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.059999999999999998" colorSpace="calibratedRGB"/>
+                    </view>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="Mode" destination="cCl-6H-MO7" id="ug9-fO-f40"/>
+                        <outlet property="UserName" destination="3do-eT-LqW" id="Pff-Ei-Z0R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gB5-pf-APN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="849" y="806"/>
         </scene>
     </scenes>
     <resources>
