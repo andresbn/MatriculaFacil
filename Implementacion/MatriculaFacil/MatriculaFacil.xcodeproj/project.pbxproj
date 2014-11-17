@@ -12,6 +12,7 @@
 		3871ECC01A1182B500A61B38 /* SeccionesTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3871ECBF1A1182B500A61B38 /* SeccionesTVC.m */; };
 		3871ECC31A1182D700A61B38 /* SeccionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3871ECC21A1182D700A61B38 /* SeccionCell.m */; };
 		3871ECC61A1186B000A61B38 /* Seccion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3871ECC51A1186B000A61B38 /* Seccion.m */; };
+		3871ECCB1A11BAC900A61B38 /* AddSeccionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3871ECCA1A11BAC900A61B38 /* AddSeccionVC.m */; };
 		38CC9E891A06E86900CE8C52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CC9E881A06E86900CE8C52 /* main.m */; };
 		38CC9E8C1A06E86900CE8C52 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CC9E8B1A06E86900CE8C52 /* AppDelegate.m */; };
 		38CC9E921A06E86900CE8C52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38CC9E901A06E86900CE8C52 /* Main.storyboard */; };
@@ -51,6 +52,8 @@
 		3871ECC21A1182D700A61B38 /* SeccionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeccionCell.m; sourceTree = "<group>"; };
 		3871ECC41A1186B000A61B38 /* Seccion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Seccion.h; sourceTree = "<group>"; };
 		3871ECC51A1186B000A61B38 /* Seccion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Seccion.m; sourceTree = "<group>"; };
+		3871ECC91A11BAC900A61B38 /* AddSeccionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSeccionVC.h; sourceTree = "<group>"; };
+		3871ECCA1A11BAC900A61B38 /* AddSeccionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSeccionVC.m; sourceTree = "<group>"; };
 		38CC9E831A06E86900CE8C52 /* MatriculaFacil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatriculaFacil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38CC9E871A06E86900CE8C52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38CC9E881A06E86900CE8C52 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -126,6 +129,30 @@
 				38E1C1831A0FF27D004DE581 /* Admin */,
 			);
 			name = Menu;
+			sourceTree = "<group>";
+		};
+		3871ECC71A1193B700A61B38 /* ListarSecciones */ = {
+			isa = PBXGroup;
+			children = (
+				3871ECC11A1182D700A61B38 /* SeccionCell.h */,
+				3871ECC21A1182D700A61B38 /* SeccionCell.m */,
+				3871ECC41A1186B000A61B38 /* Seccion.h */,
+				3871ECC51A1186B000A61B38 /* Seccion.m */,
+				38E1C19E1A10607D004DE581 /* CursosTVC.h */,
+				38E1C19F1A10607D004DE581 /* CursosTVC.m */,
+				3871ECBE1A1182B500A61B38 /* SeccionesTVC.h */,
+				3871ECBF1A1182B500A61B38 /* SeccionesTVC.m */,
+			);
+			name = ListarSecciones;
+			sourceTree = "<group>";
+		};
+		3871ECC81A11BAB000A61B38 /* CrearSeccion */ = {
+			isa = PBXGroup;
+			children = (
+				3871ECC91A11BAC900A61B38 /* AddSeccionVC.h */,
+				3871ECCA1A11BAC900A61B38 /* AddSeccionVC.m */,
+			);
+			name = CrearSeccion;
 			sourceTree = "<group>";
 		};
 		38CC9E7A1A06E86900CE8C52 = {
@@ -253,14 +280,8 @@
 		38E1C19D1A1056F3004DE581 /* Secciones */ = {
 			isa = PBXGroup;
 			children = (
-				38E1C19E1A10607D004DE581 /* CursosTVC.h */,
-				38E1C19F1A10607D004DE581 /* CursosTVC.m */,
-				3871ECBE1A1182B500A61B38 /* SeccionesTVC.h */,
-				3871ECBF1A1182B500A61B38 /* SeccionesTVC.m */,
-				3871ECC11A1182D700A61B38 /* SeccionCell.h */,
-				3871ECC21A1182D700A61B38 /* SeccionCell.m */,
-				3871ECC41A1186B000A61B38 /* Seccion.h */,
-				3871ECC51A1186B000A61B38 /* Seccion.m */,
+				3871ECC81A11BAB000A61B38 /* CrearSeccion */,
+				3871ECC71A1193B700A61B38 /* ListarSecciones */,
 			);
 			name = Secciones;
 			sourceTree = "<group>";
@@ -382,6 +403,7 @@
 				38E1C1821A0FEE65004DE581 /* WelcomeBanner.m in Sources */,
 				38E1C1A01A10607D004DE581 /* CursosTVC.m in Sources */,
 				386D0A5B1A0ECFA60046A3F9 /* LoginVC.m in Sources */,
+				3871ECCB1A11BAC900A61B38 /* AddSeccionVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

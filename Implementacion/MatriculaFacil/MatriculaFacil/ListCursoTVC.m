@@ -33,7 +33,7 @@
     cursos = [[NSMutableArray  alloc]init];
     Curso *curso = [[Curso alloc]init];
     curso.idCurso = @"0";
-    curso.nombre = @"Cálculo 1";
+    curso.nombre = @"Algoritmos Avanzados";
     curso.codigo = @"MA213";
     curso.creditos = @"6";
     curso.requisito = @"SE213";
@@ -116,7 +116,16 @@
     }
 }
 #pragma mark - Table view data source
-
+-(void) reorderPositions
+{
+    for (int i=0; i<cursos.count; i++) {
+        NSString *inStr = [NSString stringWithFormat: @"%ld", (long)i];
+        ((Curso *)[cursos objectAtIndex:i]).idCurso = inStr;
+        
+        
+    }
+    
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     if (tableView == self.searchDisplayController.searchResultsTableView) {
@@ -152,7 +161,6 @@
     } else {
         curso = [cursos objectAtIndex:indexPath.row];
     }
-    
 
     cell.nombre.text = curso.nombre;
     cell.codigo.text = [NSString stringWithFormat:@"Código: %@",curso.codigo];
@@ -175,11 +183,13 @@
         
         if (tableView == self.searchDisplayController.searchResultsTableView)
         {
+            [self reorderPositions];
             NSString *pos = ((Curso*)[searchResults objectAtIndex:indexPath.row]).idCurso;
             NSInteger myint = [pos intValue];
-            [cursos removeObjectAtIndex:myint];
+            [cursos removeObjectAtIndex:(int)myint];
             NSLog(@"%@",cursos);
-            self.searchDisplayController.active = NO;
+//            self.searchDisplayController.active = NO;
+            self.searchDisplayController.searchBar.text = @"";
             [self.tableView reloadData];
             [self setEditing:NO];
 
@@ -189,9 +199,10 @@
         {
             [cursos removeObjectAtIndex:indexPath.row];
             [self.tableView reloadData];
+            NSLog(@"%@",cursos);
         }
 
-
+        [self.tableView reloadData];
 
     }
 

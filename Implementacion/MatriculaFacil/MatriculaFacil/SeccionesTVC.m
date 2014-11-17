@@ -71,6 +71,10 @@
     
     self.navigationItem.titleView = container;
 }
+- (IBAction)CrearSeccion:(id)sender {
+    
+    [self performSegueWithIdentifier:@"CrearSeccion" sender:self];
+}
 #pragma mark - UISearchBar Methods
 
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
@@ -90,7 +94,16 @@
     return YES;
 }
 #pragma mark - Table view data source
-
+-(void) reorderPositions
+{
+    for (int i=0; i<secciones.count; i++) {
+        NSString *inStr = [NSString stringWithFormat: @"%ld", (long)i];
+        ((Seccion *)[secciones objectAtIndex:i]).idSeccion = inStr;
+        
+        
+    }
+    
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     if (tableView == self.searchDisplayController.searchResultsTableView) {
@@ -110,9 +123,6 @@
     static NSString *cellIdentifier = @"ListCursoCell";
     SeccionCell *cell = (SeccionCell *)[self.tableView dequeueReusableCellWithIdentifier:cellIdentifier
                                                                                 forIndexPath:indexPath];
-    
-    
-    
     if (cell == nil) {
         cell = [[SeccionCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
@@ -139,6 +149,42 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 225;
+}
+-(void)tableView:(UITableView *) tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        if (tableView == self.searchDisplayController.searchResultsTableView)
+        {
+            [self reorderPositions];
+            NSString *pos = ((Seccion*)[searchResults objectAtIndex:indexPath.row]).idSeccion;
+            NSInteger myint = [pos intValue];
+            [secciones removeObjectAtIndex:myint];
+            NSLog(@"%@",secciones);
+//            self.searchDisplayController.active = NO;
+            self.searchDisplayController.searchBar.text = @"";
+            [self.tableView reloadData];
+            [self setEditing:NO];
+            
+            
+        }
+        else
+        {
+            [secciones removeObjectAtIndex:indexPath.row];
+            [self.tableView reloadData];
+        }
+        
+        [self.tableView reloadData];
+        
+    }
+    
+    
+}
+
+
+-(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return @"Eliminar";
 }
 
 @end
