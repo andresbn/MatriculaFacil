@@ -38,7 +38,16 @@
 }
 - (IBAction)LoginAction:(id)sender {
     
-    [self performSegueWithIdentifier:@"LoginSuccess" sender:self];
+    
+    if ([UsuarioTxt.text isEqualToString:@"ianache"] && [PasswordTxt.text isEqualToString:@"1234"]) {
+        
+        [self performSegueWithIdentifier:@"LoginAdminSuccess" sender:self];
+    }
+    
+    if ([UsuarioTxt.text isEqualToString:@"aherrera"] && [PasswordTxt.text isEqualToString:@"1234"]) {
+        
+        [self performSegueWithIdentifier:@"LoginUserSuccess" sender:self];
+    }
 }
 
 #pragma mark - UITextfield Delegate

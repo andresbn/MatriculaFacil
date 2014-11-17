@@ -9,7 +9,7 @@
 #import "SeccionesTVC.h"
 #import "SeccionCell.h"
 #import "Seccion.h"
-
+#import "UpdateSeccionVC.h"
 @interface SeccionesTVC ()
 
 @end
@@ -75,6 +75,26 @@
     
     [self performSegueWithIdentifier:@"CrearSeccion" sender:self];
 }
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"UpdateSeccion"]) {
+        NSIndexPath *indexPath = nil;
+        
+        Seccion *sec = nil;
+        
+        if (self.searchDisplayController.active) {
+            indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
+            sec = [searchResults objectAtIndex:indexPath.row];
+        } else {
+            indexPath = [self.tableView indexPathForSelectedRow];
+            sec = [secciones objectAtIndex:indexPath.row];
+        }
+        
+        UpdateSeccionVC *destViewController = segue.destinationViewController;
+        destViewController.sec = sec;
+        
+    }
+}
+
 #pragma mark - UISearchBar Methods
 
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
@@ -112,10 +132,6 @@
     } else {
         return [secciones count];
     }
-    
-}
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
     
 }
 
