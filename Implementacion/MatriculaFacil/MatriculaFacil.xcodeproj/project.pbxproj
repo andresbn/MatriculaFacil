@@ -13,6 +13,9 @@
 		3871ECC31A1182D700A61B38 /* SeccionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3871ECC21A1182D700A61B38 /* SeccionCell.m */; };
 		3871ECC61A1186B000A61B38 /* Seccion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3871ECC51A1186B000A61B38 /* Seccion.m */; };
 		3871ECCB1A11BAC900A61B38 /* AddSeccionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3871ECCA1A11BAC900A61B38 /* AddSeccionVC.m */; };
+		3871ECCF1A1AC3C000A61B38 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3871ECCE1A1AC3C000A61B38 /* HomeVC.m */; };
+		3871ECD21A1AC41700A61B38 /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3871ECD11A1AC41700A61B38 /* HomeCell.m */; };
+		3871ECD51A1ACCCE00A61B38 /* SeccionesMatricula.m in Sources */ = {isa = PBXBuildFile; fileRef = 3871ECD41A1ACCCE00A61B38 /* SeccionesMatricula.m */; };
 		38CC9E891A06E86900CE8C52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CC9E881A06E86900CE8C52 /* main.m */; };
 		38CC9E8C1A06E86900CE8C52 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CC9E8B1A06E86900CE8C52 /* AppDelegate.m */; };
 		38CC9E921A06E86900CE8C52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38CC9E901A06E86900CE8C52 /* Main.storyboard */; };
@@ -55,6 +58,12 @@
 		3871ECC51A1186B000A61B38 /* Seccion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Seccion.m; sourceTree = "<group>"; };
 		3871ECC91A11BAC900A61B38 /* AddSeccionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSeccionVC.h; sourceTree = "<group>"; };
 		3871ECCA1A11BAC900A61B38 /* AddSeccionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSeccionVC.m; sourceTree = "<group>"; };
+		3871ECCD1A1AC3C000A61B38 /* HomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
+		3871ECCE1A1AC3C000A61B38 /* HomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
+		3871ECD01A1AC41700A61B38 /* HomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCell.h; sourceTree = "<group>"; };
+		3871ECD11A1AC41700A61B38 /* HomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCell.m; sourceTree = "<group>"; };
+		3871ECD31A1ACCCE00A61B38 /* SeccionesMatricula.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeccionesMatricula.h; sourceTree = "<group>"; };
+		3871ECD41A1ACCCE00A61B38 /* SeccionesMatricula.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeccionesMatricula.m; sourceTree = "<group>"; };
 		38CC9E831A06E86900CE8C52 /* MatriculaFacil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatriculaFacil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38CC9E871A06E86900CE8C52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38CC9E881A06E86900CE8C52 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -109,6 +118,7 @@
 		386D0A571A0ECF390046A3F9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3871ECCC1A1AC35400A61B38 /* Matricula */,
 				38E1C19D1A1056F3004DE581 /* Secciones */,
 				38E1C1841A0FF29D004DE581 /* Cursos */,
 				386D0A5C1A0ED24D0046A3F9 /* Menu */,
@@ -156,6 +166,19 @@
 				3871ECCA1A11BAC900A61B38 /* AddSeccionVC.m */,
 			);
 			name = CrearSeccion;
+			sourceTree = "<group>";
+		};
+		3871ECCC1A1AC35400A61B38 /* Matricula */ = {
+			isa = PBXGroup;
+			children = (
+				3871ECCD1A1AC3C000A61B38 /* HomeVC.h */,
+				3871ECCE1A1AC3C000A61B38 /* HomeVC.m */,
+				3871ECD01A1AC41700A61B38 /* HomeCell.h */,
+				3871ECD11A1AC41700A61B38 /* HomeCell.m */,
+				3871ECD31A1ACCCE00A61B38 /* SeccionesMatricula.h */,
+				3871ECD41A1ACCCE00A61B38 /* SeccionesMatricula.m */,
+			);
+			name = Matricula;
 			sourceTree = "<group>";
 		};
 		38CC9E7A1A06E86900CE8C52 = {
@@ -402,8 +425,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				38E1C17F1A0FE748004DE581 /* MainCell.m in Sources */,
+				3871ECD51A1ACCCE00A61B38 /* SeccionesMatricula.m in Sources */,
 				38E1C1871A0FF2CC004DE581 /* AddCursoVC.m in Sources */,
 				38CC9E8C1A06E86900CE8C52 /* AppDelegate.m in Sources */,
+				3871ECCF1A1AC3C000A61B38 /* HomeVC.m in Sources */,
 				386D0A5F1A0ED25C0046A3F9 /* MainVC.m in Sources */,
 				38E1C19A1A10097D004DE581 /* Curso.m in Sources */,
 				38E1C1931A100083004DE581 /* ListCursoTVC.m in Sources */,
@@ -411,6 +436,7 @@
 				38DC969B1A1A5DCA00917B1E /* UpdateSeccionVC.m in Sources */,
 				3871ECC01A1182B500A61B38 /* SeccionesTVC.m in Sources */,
 				38CC9E891A06E86900CE8C52 /* main.m in Sources */,
+				3871ECD21A1AC41700A61B38 /* HomeCell.m in Sources */,
 				38E1C1971A100473004DE581 /* ListCursoCell.m in Sources */,
 				38E1C18D1A0FF2FE004DE581 /* UpdateCursoVC.m in Sources */,
 				3871ECC61A1186B000A61B38 /* Seccion.m in Sources */,

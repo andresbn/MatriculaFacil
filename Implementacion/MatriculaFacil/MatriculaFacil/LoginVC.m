@@ -35,6 +35,13 @@
     tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
     tap.enabled = NO;
     [self.view addGestureRecognizer:tap];
+    
+    
+    UsuarioTxt.text = @"ianache";
+    PasswordTxt.text = @"1234";
+    
+//    UsuarioTxt.text = @"aherrera";
+//    PasswordTxt.text = @"1234";
 }
 - (IBAction)LoginAction:(id)sender {
     
@@ -48,6 +55,8 @@
         
         [self performSegueWithIdentifier:@"LoginUserSuccess" sender:self];
     }
+    
+
 }
 
 #pragma mark - UITextfield Delegate

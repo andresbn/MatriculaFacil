@@ -15,4 +15,5 @@
 @property (nonatomic, strong) NSString *creditos;
 @property (nonatomic, strong) NSString *requisito;
 @property (nonatomic, strong) NSString *ciclo;
+@property (nonatomic, strong) NSString *estado;
 @end

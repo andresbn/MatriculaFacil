@@ -32,7 +32,7 @@
 
 -(void)initializeControls
 {
-    NSString *welcome = [NSString stringWithFormat:@"Bienvenido %@",@"Alvaro Herrera"];
+    NSString *welcome = [NSString stringWithFormat:@"Bienvenido %@",@"Ilver Anache"];
     UserName.text = welcome;
     
     
