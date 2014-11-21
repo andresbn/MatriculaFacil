@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ConnectionManager.h"
 
 @interface ListCursoTVC : UITableViewController
 {
     NSMutableArray *cursos;
     NSMutableArray *searchResults;
+    ConnectionManager *manager;
 }
 @end

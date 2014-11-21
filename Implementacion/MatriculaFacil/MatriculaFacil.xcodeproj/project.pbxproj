@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38526BFB1A1ED8A0004D78B3 /* MatriculaFacil.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 38526BFA1A1ED8A0004D78B3 /* MatriculaFacil.sqlite */; };
+		38526BFE1A1ED8C2004D78B3 /* ConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 38526BFD1A1ED8C2004D78B3 /* ConnectionManager.m */; };
+		38526C011A1ED9C8004D78B3 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 38526C001A1ED9C8004D78B3 /* libsqlite3.dylib */; };
 		386D0A5B1A0ECFA60046A3F9 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 386D0A5A1A0ECFA60046A3F9 /* LoginVC.m */; };
 		386D0A5F1A0ED25C0046A3F9 /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 386D0A5E1A0ED25C0046A3F9 /* MainVC.m */; };
 		3871ECC01A1182B500A61B38 /* SeccionesTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3871ECBF1A1182B500A61B38 /* SeccionesTVC.m */; };
@@ -46,6 +49,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		38526BFA1A1ED8A0004D78B3 /* MatriculaFacil.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = MatriculaFacil.sqlite; sourceTree = "<group>"; };
+		38526BFC1A1ED8C2004D78B3 /* ConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionManager.h; sourceTree = "<group>"; };
+		38526BFD1A1ED8C2004D78B3 /* ConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionManager.m; sourceTree = "<group>"; };
+		38526C001A1ED9C8004D78B3 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		386D0A591A0ECFA60046A3F9 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
 		386D0A5A1A0ECFA60046A3F9 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
 		386D0A5D1A0ED25C0046A3F9 /* MainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainVC.h; sourceTree = "<group>"; };
@@ -102,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38526C011A1ED9C8004D78B3 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,9 +123,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38526BF91A1ED893004D78B3 /* ConnectionManager */ = {
+			isa = PBXGroup;
+			children = (
+				38526BFA1A1ED8A0004D78B3 /* MatriculaFacil.sqlite */,
+				38526BFC1A1ED8C2004D78B3 /* ConnectionManager.h */,
+				38526BFD1A1ED8C2004D78B3 /* ConnectionManager.m */,
+			);
+			name = ConnectionManager;
+			sourceTree = "<group>";
+		};
+		38526BFF1A1ED99C004D78B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38526C001A1ED9C8004D78B3 /* libsqlite3.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		386D0A571A0ECF390046A3F9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				38526BF91A1ED893004D78B3 /* ConnectionManager */,
 				3871ECCC1A1AC35400A61B38 /* Matricula */,
 				38E1C19D1A1056F3004DE581 /* Secciones */,
 				38E1C1841A0FF29D004DE581 /* Cursos */,
@@ -202,6 +229,7 @@
 		38CC9E851A06E86900CE8C52 /* MatriculaFacil */ = {
 			isa = PBXGroup;
 			children = (
+				38526BFF1A1ED99C004D78B3 /* Frameworks */,
 				38E1C17C1A0FD652004DE581 /* Images */,
 				38CC9E8A1A06E86900CE8C52 /* AppDelegate.h */,
 				38CC9E8B1A06E86900CE8C52 /* AppDelegate.m */,
@@ -402,6 +430,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38526BFB1A1ED8A0004D78B3 /* MatriculaFacil.sqlite in Resources */,
 				38CC9E921A06E86900CE8C52 /* Main.storyboard in Resources */,
 				38E1C17B1A0FD1B8004DE581 /* background.png in Resources */,
 				38CC9E971A06E86900CE8C52 /* LaunchScreen.xib in Resources */,
@@ -436,6 +465,7 @@
 				38DC969B1A1A5DCA00917B1E /* UpdateSeccionVC.m in Sources */,
 				3871ECC01A1182B500A61B38 /* SeccionesTVC.m in Sources */,
 				38CC9E891A06E86900CE8C52 /* main.m in Sources */,
+				38526BFE1A1ED8C2004D78B3 /* ConnectionManager.m in Sources */,
 				3871ECD21A1AC41700A61B38 /* HomeCell.m in Sources */,
 				38E1C1971A100473004DE581 /* ListCursoCell.m in Sources */,
 				38E1C18D1A0FF2FE004DE581 /* UpdateCursoVC.m in Sources */,

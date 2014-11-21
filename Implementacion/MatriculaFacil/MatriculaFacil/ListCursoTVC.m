@@ -30,24 +30,10 @@
 }
 -(void) fillData
 {
-    cursos = [[NSMutableArray  alloc]init];
-    Curso *curso = [[Curso alloc]init];
-    curso.idCurso = @"0";
-    curso.nombre = @"Algoritmos Avanzados";
-    curso.codigo = @"MA213";
-    curso.creditos = @"6";
-    curso.requisito = @"SE213";
-    curso.ciclo = @"4";
-    [cursos addObject:curso];
-    
-    Curso *curso2 = [[Curso alloc]init];
-    curso2.idCurso = @"1";
-    curso2.nombre = @"Física 2";
-    curso2.codigo = @"MA213";
-    curso2.creditos = @"6";
-    curso2.requisito = @"SE213";
-    curso2.ciclo = @"4";
-    [cursos addObject:curso2];
+    manager = [[ConnectionManager alloc]init];
+    [manager LoadDB];
+    cursos = [manager LoadCursos];
+    NSLog(@"%@",cursos);
 }
 -(void) customNavigation
 {

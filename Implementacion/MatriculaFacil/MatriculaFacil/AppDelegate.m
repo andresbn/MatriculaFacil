@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 
+
 @interface AppDelegate ()
 
 @end
@@ -18,6 +19,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
+    
+    manager = [[ConnectionManager alloc]init];
+    [manager LoadDB];
+
 
     return YES;
 }
