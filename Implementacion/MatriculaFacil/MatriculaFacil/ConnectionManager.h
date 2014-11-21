@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Curso.h"
 
 @interface ConnectionManager : NSObject
 
@@ -15,4 +16,7 @@
 
 -(void) LoadDB;
 -(NSMutableArray*) LoadCursos;
+-(BOOL)insertCursoWith:(Curso*)newCurso;
+-(BOOL)updateCursoWith:(Curso*)newCurso;
+-(BOOL)deleteCursoWith:(NSString*)idCurso;
 @end

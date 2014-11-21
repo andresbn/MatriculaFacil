@@ -59,6 +59,37 @@
 }
 - (IBAction)CrearCurso:(id)sender {
     
+    manager = [[ConnectionManager alloc]init];
+    
+    BOOL success;
+    
+    Curso *newCurso = [[Curso alloc]init];
+    newCurso.nombre = NombreTxt.text;
+    newCurso.codigo = CodigoTxt.text;
+    newCurso.requisito = RequisitoTxt.text;
+    newCurso.creditos = CreditosTxt.text;
+    newCurso.ciclo = CicloTxt.text;
+    
+    success = [manager insertCursoWith:newCurso];
+    
+    if (success) {
+        
+        UIAlertView *alerta = [[UIAlertView alloc ] initWithTitle:@"Confirmación" message:@"Se añadió un registro en la base de datos" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        
+        [alerta show];
+        
+        [[NSNotificationCenter defaultCenter]
+         postNotificationName:@"reload"
+         object:self];
+    }
+    else
+    {
+     
+        UIAlertView *alerta = [[UIAlertView alloc ] initWithTitle:@"Confirmación" message:@"No se puso añadir registro" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        
+        [alerta show];
+    }
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 #pragma mark - UITextfield Delegate

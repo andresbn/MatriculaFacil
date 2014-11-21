@@ -63,6 +63,36 @@
 }
 - (IBAction)ActualizarCurso:(id)sender {
     
+    manager = [[ConnectionManager alloc]init];
+    [manager LoadDB];
+    BOOL success;
+    Curso *newCurso = [[Curso alloc]init];
+    newCurso.idCurso = cur.idCurso;
+    newCurso.nombre =NombreTxt.text;
+    newCurso.codigo=CodigoTxt.text;
+    newCurso.creditos =CreditosTxt.text;
+    newCurso.requisito =RequisitoTxt.text;
+    newCurso.ciclo = CicloTxt.text;
+    success = [manager updateCursoWith:newCurso];
+    
+    if (success) {
+        
+        UIAlertView *alerta = [[UIAlertView alloc ] initWithTitle:@"Confirmación" message:@"Se actualizó un registro en la base de datos" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        
+        [alerta show];
+        
+        [[NSNotificationCenter defaultCenter]
+         postNotificationName:@"reload"
+         object:self];
+    }
+    else
+    {
+        
+        UIAlertView *alerta = [[UIAlertView alloc ] initWithTitle:@"Confirmación" message:@"No se actualizó añadir registro" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        
+        [alerta show];
+    }
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 

@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "Curso.h"
+#import "ConnectionManager.h"
 
 @interface UpdateCursoVC : UIViewController<UITextFieldDelegate>
+{
+    ConnectionManager *manager;
+}
 @property (nonatomic, strong) Curso *cur;
 @property (strong, nonatomic) IBOutlet UITextField *NombreTxt;
 @property (strong, nonatomic) IBOutlet UILabel *CodigoLbl;

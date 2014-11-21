@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ConnectionManager.h"
 
 @interface AddCursoVC : UIViewController<UITextFieldDelegate>
-
+{
+    ConnectionManager *manager;
+}
 @property (strong, nonatomic) IBOutlet UITextField *NombreTxt;
 @property (strong, nonatomic) IBOutlet UILabel *CodigoLbl;
 @property (strong, nonatomic) IBOutlet UITextField *CodigoTxt;

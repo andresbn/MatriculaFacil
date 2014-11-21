@@ -22,6 +22,11 @@
     
     [self customNavigation];
     [self fillData];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(reloadTable)
+                                                 name:@"reload"
+                                               object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,6 +39,11 @@
     [manager LoadDB];
     cursos = [manager LoadCursos];
     NSLog(@"%@",cursos);
+}
+-(void)reloadTable
+{
+    [self fillData];
+    [self.tableView reloadData]; 
 }
 -(void) customNavigation
 {
@@ -169,12 +179,34 @@
         
         if (tableView == self.searchDisplayController.searchResultsTableView)
         {
-            [self reorderPositions];
+//            [self reorderPositions];
             NSString *pos = ((Curso*)[searchResults objectAtIndex:indexPath.row]).idCurso;
             NSInteger myint = [pos intValue];
-            [cursos removeObjectAtIndex:(int)myint];
+
+
+            manager = [[ConnectionManager alloc]init];
+            [manager LoadDB];
+            BOOL success;
+            success = [manager deleteCursoWith:pos];
+            
+            if (success) {
+                
+                UIAlertView *alerta = [[UIAlertView alloc ] initWithTitle:@"Confirmación" message:@"Se elimino un registro en la base de datos" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                
+                [alerta show];
+                
+                [self reloadTable];
+            }
+            else
+            {
+                
+                UIAlertView *alerta = [[UIAlertView alloc ] initWithTitle:@"Confirmación" message:@"No se elimino añadir registro" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                
+                [alerta show];
+            }
+
+            [self reloadTable];
             NSLog(@"%@",cursos);
-//            self.searchDisplayController.active = NO;
             self.searchDisplayController.searchBar.text = @"";
             [self.tableView reloadData];
             [self setEditing:NO];
@@ -183,7 +215,31 @@
         }
         else
         {
-            [cursos removeObjectAtIndex:indexPath.row];
+
+            
+            manager = [[ConnectionManager alloc]init];
+            [manager LoadDB];
+            BOOL success;
+            NSString *myint = ((Curso*)[cursos objectAtIndex:indexPath.row]).idCurso;
+            
+            success = [manager deleteCursoWith:myint];
+            
+            if (success) {
+                
+                UIAlertView *alerta = [[UIAlertView alloc ] initWithTitle:@"Confirmación" message:@"Se elimino un registro en la base de datos" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                
+                [alerta show];
+                
+                [self reloadTable];
+            }
+            else
+            {
+                
+                UIAlertView *alerta = [[UIAlertView alloc ] initWithTitle:@"Confirmación" message:@"No se elimino añadir registro" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                
+                [alerta show];
+            }
+            [self reloadTable];
             [self.tableView reloadData];
             NSLog(@"%@",cursos);
         }

@@ -72,4 +72,96 @@
     return cursos;
 
 }
+-(BOOL)insertCursoWith: (Curso*)newCurso
+{
+    [self LoadDB];
+    sqlite3 *database;
+    sqlite3_stmt *sentencia;
+    
+    
+    if(sqlite3_open([dataBasePath UTF8String], &database) == SQLITE_OK)
+    {
+        
+        NSString *sql = [NSString stringWithFormat:@"insert into Curso (\"nombre\",\"codigo\",\"requisito\",\"creditos\",\"ciclo\") VALUES (\"%@\",\"%@\",\"%@\",\"%@\",\"%@\")",newCurso.nombre,newCurso.codigo,newCurso.requisito,newCurso.creditos,newCurso.ciclo];
+        
+        NSLog(@"%@",sql);
+        
+        if(sqlite3_prepare_v2(database, [sql UTF8String ],-1,&sentencia, NULL)==SQLITE_OK)
+        {
+            while(sqlite3_step(sentencia)==SQLITE_ROW){
+                
+            }
+        }else{
+            NSLog(@"Error en la creación del insert");
+        }
+        sqlite3_finalize(sentencia);
+        
+        return TRUE;
+    }else{
+        NSLog(@"No se a podido abrir la BD");
+    }
+    sqlite3_close(database);
+    
+    
+    return FALSE;
+}
+-(BOOL)updateCursoWith:(Curso*)newCurso
+{
+    sqlite3 *database;
+    sqlite3_stmt *sentencia = nil;
+    
+    if(sqlite3_open([dataBasePath UTF8String], &database)== SQLITE_OK)
+    {
+        
+        NSString *sentenciaSQL = [NSString stringWithFormat:@"update Curso Set nombre = '%@', codigo = '%@', requisito = '%@',creditos = '%@',ciclo = '%@' Where id='%d'",newCurso.nombre,newCurso.codigo,newCurso.requisito,newCurso.creditos,newCurso.ciclo,[newCurso.idCurso intValue]];
+        
+        if(sqlite3_prepare_v2(database, [sentenciaSQL UTF8String], -1, &sentencia, NULL)==SQLITE_OK){
+            sqlite3_bind_text(sentencia, 1, [newCurso.nombre UTF8String], -1, SQLITE_TRANSIENT);
+            sqlite3_bind_text(sentencia, 2, [newCurso.codigo UTF8String], -1, SQLITE_TRANSIENT);
+            sqlite3_bind_text(sentencia, 3, [newCurso.requisito UTF8String], -1, SQLITE_TRANSIENT);
+            sqlite3_bind_text(sentencia, 4, [newCurso.creditos UTF8String], -1, SQLITE_TRANSIENT);
+            sqlite3_bind_text(sentencia, 5, [newCurso.ciclo UTF8String], -1, SQLITE_TRANSIENT);
+            
+            
+        }
+        
+      
+    }
+    char* errmsg;
+    sqlite3_exec(database, "COMMIT", NULL, NULL, &errmsg);
+    
+    if(SQLITE_DONE != sqlite3_step(sentencia)){
+        NSLog(@"Error while updating. %s", sqlite3_errmsg(database));
+    }
+    else{
+        
+    }
+    sqlite3_finalize(sentencia);
+    sqlite3_close(database);
+
+    
+    return TRUE;
+}
+-(BOOL)deleteCursoWith:(NSString*)idCurso
+{
+    sqlite3 *db;
+    int dbrc;
+    const char *dbFilePathUTF8 = [dataBasePath UTF8String];
+    dbrc = sqlite3_open(dbFilePathUTF8, &db);
+    if (dbrc) {
+        NSLog(@"Impossibile aprire il Database!");
+        return FALSE;
+    }
+    
+    sqlite3_stmt *dbps;
+    
+    NSString *deleteStatementsNS = [NSString stringWithFormat: @"DELETE FROM Curso WHERE id='%d'", [idCurso intValue]];
+    const char *deleteStatement = [deleteStatementsNS UTF8String];
+    dbrc = sqlite3_prepare_v2(db, deleteStatement, -1, &dbps, NULL);
+    dbrc = sqlite3_step(dbps);
+
+    sqlite3_finalize(dbps);
+    sqlite3_close(db);
+    return TRUE;
+}
 @end
