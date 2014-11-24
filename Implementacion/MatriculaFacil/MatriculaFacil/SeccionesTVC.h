@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "Curso.h"
+#import "ConnectionManager.h"
+
 @interface SeccionesTVC : UITableViewController
 {
     NSMutableArray *secciones;
     NSMutableArray *searchResults;
+    ConnectionManager *manager;
 }
 @property (nonatomic, strong) Curso *cur; 
 @end

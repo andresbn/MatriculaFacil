@@ -10,6 +10,7 @@
 
 @interface Seccion : NSObject
 @property (nonatomic, strong) NSString *idSeccion;
+@property (nonatomic, strong) NSString *idCurso;
 @property (nonatomic, strong) NSString *codigo; 
 @property (nonatomic, strong) NSString *profesor;
 @property (nonatomic, strong) NSString *salon;

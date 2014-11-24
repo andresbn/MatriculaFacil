@@ -8,6 +8,7 @@
 
 #import "ConnectionManager.h"
 #import "Curso.h"
+#import "Seccion.h"
 #import <sqlite3.h>
 
 @implementation ConnectionManager
@@ -164,4 +165,40 @@
     sqlite3_close(db);
     return TRUE;
 }
+
+
+-(NSMutableArray*) LoadSeccionesOfCurso:(NSString*)idCurso
+{
+    sqlite3 *database;
+    sqlite3_stmt *sentencia;
+    NSMutableArray *cursos = [[NSMutableArray alloc]init];
+    
+    if(sqlite3_open([dataBasePath UTF8String], &database)== SQLITE_OK)
+    {
+        NSString *sentenciaSQL = [NSString stringWithFormat:@"select * from Seccion Where idCurso = '%d'",[idCurso intValue]];
+        
+        if(sqlite3_prepare_v2(database, [sentenciaSQL UTF8String], -1, &sentencia, NULL)== SQLITE_OK )
+        {
+            while(sqlite3_step(sentencia)==SQLITE_ROW)
+            {
+                Seccion *seccion = [[Seccion alloc]init];
+                seccion.idSeccion = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sentencia, 0)];
+                seccion.idCurso = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sentencia, 1)];
+                seccion.codigo = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sentencia, 2)];
+                seccion.profesor = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sentencia, 3)];
+                seccion.salon = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sentencia, 4)];
+                seccion.inicio = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sentencia, 5)];
+                seccion.fin = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sentencia, 6)];
+                seccion.tipo = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sentencia, 7)];
+                [cursos addObject:seccion];
+                
+            }
+        }
+        sqlite3_finalize(sentencia);
+    }
+    sqlite3_close(database);
+    
+    return cursos;
+}
+
 @end

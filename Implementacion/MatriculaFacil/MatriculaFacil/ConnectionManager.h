@@ -19,4 +19,7 @@
 -(BOOL)insertCursoWith:(Curso*)newCurso;
 -(BOOL)updateCursoWith:(Curso*)newCurso;
 -(BOOL)deleteCursoWith:(NSString*)idCurso;
+
+-(NSMutableArray*) LoadSeccionesOfCurso:(NSString*)idCurso;
+
 @end

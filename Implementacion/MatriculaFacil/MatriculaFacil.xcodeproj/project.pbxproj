@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		38526BFB1A1ED8A0004D78B3 /* MatriculaFacil.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 38526BFA1A1ED8A0004D78B3 /* MatriculaFacil.sqlite */; };
 		38526BFE1A1ED8C2004D78B3 /* ConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 38526BFD1A1ED8C2004D78B3 /* ConnectionManager.m */; };
 		38526C011A1ED9C8004D78B3 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 38526C001A1ED9C8004D78B3 /* libsqlite3.dylib */; };
+		38526C031A22AB3B004D78B3 /* MatriculaFacil.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 38526C021A22AB3B004D78B3 /* MatriculaFacil.sqlite */; };
 		386D0A5B1A0ECFA60046A3F9 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 386D0A5A1A0ECFA60046A3F9 /* LoginVC.m */; };
 		386D0A5F1A0ED25C0046A3F9 /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 386D0A5E1A0ED25C0046A3F9 /* MainVC.m */; };
 		3871ECC01A1182B500A61B38 /* SeccionesTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3871ECBF1A1182B500A61B38 /* SeccionesTVC.m */; };
@@ -49,10 +49,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		38526BFA1A1ED8A0004D78B3 /* MatriculaFacil.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = MatriculaFacil.sqlite; sourceTree = "<group>"; };
 		38526BFC1A1ED8C2004D78B3 /* ConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionManager.h; sourceTree = "<group>"; };
 		38526BFD1A1ED8C2004D78B3 /* ConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionManager.m; sourceTree = "<group>"; };
 		38526C001A1ED9C8004D78B3 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		38526C021A22AB3B004D78B3 /* MatriculaFacil.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = MatriculaFacil.sqlite; sourceTree = "<group>"; };
 		386D0A591A0ECFA60046A3F9 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
 		386D0A5A1A0ECFA60046A3F9 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
 		386D0A5D1A0ED25C0046A3F9 /* MainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainVC.h; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 		38526BF91A1ED893004D78B3 /* ConnectionManager */ = {
 			isa = PBXGroup;
 			children = (
-				38526BFA1A1ED8A0004D78B3 /* MatriculaFacil.sqlite */,
+				38526C021A22AB3B004D78B3 /* MatriculaFacil.sqlite */,
 				38526BFC1A1ED8C2004D78B3 /* ConnectionManager.h */,
 				38526BFD1A1ED8C2004D78B3 /* ConnectionManager.m */,
 			);
@@ -430,7 +430,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38526BFB1A1ED8A0004D78B3 /* MatriculaFacil.sqlite in Resources */,
+				38526C031A22AB3B004D78B3 /* MatriculaFacil.sqlite in Resources */,
 				38CC9E921A06E86900CE8C52 /* Main.storyboard in Resources */,
 				38E1C17B1A0FD1B8004DE581 /* background.png in Resources */,
 				38CC9E971A06E86900CE8C52 /* LaunchScreen.xib in Resources */,

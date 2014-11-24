@@ -31,26 +31,10 @@
 }
 -(void) fillData
 {
-    secciones = [[NSMutableArray  alloc]init];
-    Seccion *seccion = [[Seccion alloc]init];
-    seccion.idSeccion = @"0";
-    seccion.codigo = @"IN241";
-    seccion.profesor = @"Julio López";
-    seccion.salon = @"B43";
-    seccion.inicio = @"2:00pm";
-    seccion.fin = @"4:00pm";
-    seccion.tipo = @"Teoría";
-    [secciones addObject:seccion];
-    
-    Seccion *seccion2 = [[Seccion alloc]init];
-    seccion2.idSeccion = @"1";
-    seccion2.codigo = @"MF654";
-    seccion2.profesor = @"Angela Salinas";
-    seccion2.salon = @"A32";
-    seccion2.inicio = @"6:00pm";
-    seccion2.fin = @"9:00pm";
-    seccion2.tipo = @"Laboratorio";
-    [secciones addObject:seccion2];
+    manager = [[ConnectionManager alloc]init];
+    [manager LoadDB];
+    secciones = [manager LoadSeccionesOfCurso:cur.idCurso];
+    NSLog(@"%@",secciones);
 }
 -(void) customNavigation
 {
