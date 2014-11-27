@@ -1,6 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+	
+        <modelVersion>4.0.0</modelVersion>
 	<groupId>org.springframework.samples</groupId>
 	<artifactId>MatriculaCore</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -22,7 +23,13 @@
 		<!-- Logging -->
 		<logback.version>1.0.13</logback.version>
 		<slf4j.version>1.7.5</slf4j.version>
-
+                <mysql.version>5.1.9</mysql.version>
+                <mysqldb.host>localhost</mysqldb.host>
+                <mysql.username>root</mysql.username>
+                <mysql.password>root</mysql.password>
+                <schema.name>matriculadb</schema.name>
+                <flyway-maven-plugin.version>3.0</flyway-maven-plugin.version>
+                <flyway.locations>filesystem:${basedir}/src/main/resources/db/migration</flyway.locations>
 	</properties>
 
 	<dependencies>
@@ -119,4 +126,73 @@
                     <version>2.5</version>
                 </dependency>
 	</dependencies>
+        
+        
+        
+        
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>sql-maven-plugin</artifactId>
+                <version>1.5</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>${mysql.version}</version>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>execute</goal>
+                        </goals>
+                        <configuration>
+                            <driver>com.mysql.jdbc.Driver</driver>
+                            <url>jdbc:mysql://${mysqldb.host}:3306/</url>
+                            <username>${mysql.username}</username>
+                            <password>${mysql.password}</password>
+                            <sqlCommand>
+                                drop database if exists ${schema.name};
+                                create database if not exists ${schema.name};
+                            </sqlCommand>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+             <plugin>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-maven-plugin</artifactId>
+                <version>${flyway-maven-plugin.version}</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>${mysql.version}</version>
+                    </dependency>
+                </dependencies>                
+                <executions>
+                    <execution>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            
+                            <goal>migrate</goal>
+                        </goals>
+                        <configuration>
+                             <url>jdbc:mysql://${mysqldb.host}:3306/${schema.name}</url>
+                            <user>${mysql.username}</user>
+                            <password>${mysql.password}</password>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>    
+            
+            
+            
+                   
+        </plugins>
+    </build>
+                
 </project>
