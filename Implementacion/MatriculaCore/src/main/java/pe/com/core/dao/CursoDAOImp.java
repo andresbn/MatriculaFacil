@@ -32,7 +32,7 @@ public class CursoDAOImp implements CursoDAO{
             session.close();
             
         } catch (Exception e) {
-            LOGGER.error("Sorry, something wrong!", e);
+             LOGGER.error("Sorry, something wrong!", e);
         }
     }
 

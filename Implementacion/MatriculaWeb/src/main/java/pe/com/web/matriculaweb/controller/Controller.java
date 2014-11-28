@@ -53,6 +53,8 @@ public class Controller extends HttpServlet {
 
     protected void crearCurso(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+        
         boolean b = true;
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 
