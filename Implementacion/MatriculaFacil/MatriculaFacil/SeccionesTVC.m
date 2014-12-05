@@ -23,6 +23,11 @@
     
     [self customNavigation];
     [self fillData];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(reloadTable)
+                                                 name:@"reload2"
+                                               object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,6 +40,11 @@
     [manager LoadDB];
     secciones = [manager LoadSeccionesOfCurso:cur.idCurso];
     NSLog(@"%@",secciones);
+}
+-(void)reloadTable
+{
+    [self fillData];
+    [self.tableView reloadData];
 }
 -(void) customNavigation
 {
@@ -57,6 +67,12 @@
 }
 - (IBAction)CrearSeccion:(id)sender {
     
+    
+    NSString *idCurso = cur.idCurso;
+    [[NSUserDefaults standardUserDefaults] setObject:idCurso forKey:@"idCurso"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    
     [self performSegueWithIdentifier:@"CrearSeccion" sender:self];
 }
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -77,6 +93,7 @@
         destViewController.sec = sec;
         
     }
+    
 }
 
 #pragma mark - UISearchBar Methods
@@ -157,12 +174,35 @@
         
         if (tableView == self.searchDisplayController.searchResultsTableView)
         {
-            [self reorderPositions];
+//            [self reorderPositions];
             NSString *pos = ((Seccion*)[searchResults objectAtIndex:indexPath.row]).idSeccion;
             NSInteger myint = [pos intValue];
-            [secciones removeObjectAtIndex:myint];
+            
+            manager = [[ConnectionManager alloc]init];
+            [manager LoadDB];
+            
+            BOOL success;
+            success = [manager deleteSeccionWith:pos];
+            
+            if (success) {
+                
+                UIAlertView *alerta = [[UIAlertView alloc ] initWithTitle:@"Confirmación" message:@"Se elimino un registro en la base de datos" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                
+                [alerta show];
+                
+                [self reloadTable];
+            }
+            else
+            {
+                
+                UIAlertView *alerta = [[UIAlertView alloc ] initWithTitle:@"Confirmación" message:@"No se elimino añadir registro" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                
+                [alerta show];
+            }
+            
+            
+            [self reloadTable];
             NSLog(@"%@",secciones);
-//            self.searchDisplayController.active = NO;
             self.searchDisplayController.searchBar.text = @"";
             [self.tableView reloadData];
             [self setEditing:NO];
@@ -171,8 +211,31 @@
         }
         else
         {
-            [secciones removeObjectAtIndex:indexPath.row];
+            manager = [[ConnectionManager alloc]init];
+            [manager LoadDB];
+            BOOL success;
+            NSString *myint = ((Seccion*)[secciones objectAtIndex:indexPath.row]).idSeccion;
+            
+            success = [manager deleteSeccionWith:myint];
+            
+            if (success) {
+                
+                UIAlertView *alerta = [[UIAlertView alloc ] initWithTitle:@"Confirmación" message:@"Se elimino un registro en la base de datos" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                
+                [alerta show];
+                
+                [self reloadTable];
+            }
+            else
+            {
+                
+                UIAlertView *alerta = [[UIAlertView alloc ] initWithTitle:@"Confirmación" message:@"No se elimino añadir registro" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                
+                [alerta show];
+            }
+            [self reloadTable];
             [self.tableView reloadData];
+            NSLog(@"%@",secciones);
         }
         
         [self.tableView reloadData];

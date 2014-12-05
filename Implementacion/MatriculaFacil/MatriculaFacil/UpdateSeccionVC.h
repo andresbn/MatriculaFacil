@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "Seccion.h"
+#import "ConnectionManager.h"
+
 
 @interface UpdateSeccionVC : UIViewController
+{
+    ConnectionManager *manager;
+}
 @property (nonatomic, strong) Seccion *sec;
 @property (weak, nonatomic) IBOutlet UILabel *CodigoLbl;
 @property (weak, nonatomic) IBOutlet UITextField *CodigoTxt;

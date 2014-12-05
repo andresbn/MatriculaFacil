@@ -56,6 +56,40 @@
     self.navigationItem.titleView = container;
 }
 - (IBAction)CrearSeccion:(id)sender {
+    manager = [[ConnectionManager alloc]init];
+    
+    BOOL success;
+    
+    Seccion *newSeccion = [[Seccion alloc]init];
+    NSString *idCurso = [[NSUserDefaults standardUserDefaults]
+                            stringForKey:@"idCurso"];
+    newSeccion.idCurso = idCurso;
+    newSeccion.codigo = CodigoTxt.text;
+    newSeccion.profesor = ProfesorTxt.text;
+    newSeccion.salon = SalonTxt.text;
+    newSeccion.inicio = InicioTxt.text;
+    newSeccion.fin = FinTxt.text;
+    newSeccion.tipo= TipoTxt.text;
+    
+    success = [manager insertSeccionWith:newSeccion];
+    
+    if (success) {
+        
+        UIAlertView *alerta = [[UIAlertView alloc ] initWithTitle:@"Confirmación" message:@"Se añadió un registro en la base de datos" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        
+        [alerta show];
+        
+        [[NSNotificationCenter defaultCenter]
+         postNotificationName:@"reload2"
+         object:self];
+    }
+    else
+    {
+        
+        UIAlertView *alerta = [[UIAlertView alloc ] initWithTitle:@"Confirmación" message:@"No se puso añadir registro" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        
+        [alerta show];
+    }
     
     [self.navigationController popViewControllerAnimated:YES];
 }

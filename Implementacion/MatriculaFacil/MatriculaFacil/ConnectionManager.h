@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Curso.h"
+#import "Seccion.h"
 
 @interface ConnectionManager : NSObject
 
@@ -21,5 +22,7 @@
 -(BOOL)deleteCursoWith:(NSString*)idCurso;
 
 -(NSMutableArray*) LoadSeccionesOfCurso:(NSString*)idCurso;
-
+-(BOOL)insertSeccionWith:(Seccion*)newSeccion;
+-(BOOL)updateSeccionWith:(Seccion*)newSeccion;
+-(BOOL)deleteSeccionWith:(NSString*)idSeccion;
 @end

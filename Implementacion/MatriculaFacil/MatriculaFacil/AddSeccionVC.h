@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ConnectionManager.h"
 
 @interface AddSeccionVC : UIViewController<UITextFieldDelegate>
+{
+    ConnectionManager *manager;
+}
 @property (weak, nonatomic) IBOutlet UILabel *CodigoLbl;
 @property (weak, nonatomic) IBOutlet UITextField *CodigoTxt;
 @property (weak, nonatomic) IBOutlet UILabel *ProfesorLbl;

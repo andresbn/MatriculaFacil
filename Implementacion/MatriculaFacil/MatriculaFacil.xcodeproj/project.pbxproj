@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		381A00511A23FE6100562797 /* delete_text.png in Resources */ = {isa = PBXBuildFile; fileRef = 381A00501A23FE6100562797 /* delete_text.png */; };
+		381A00531A2400CE00562797 /* loginImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 381A00521A2400CE00562797 /* loginImage.png */; };
+		381A00551A24021600562797 /* loginImage2.png in Resources */ = {isa = PBXBuildFile; fileRef = 381A00541A24021600562797 /* loginImage2.png */; };
 		38526BFE1A1ED8C2004D78B3 /* ConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 38526BFD1A1ED8C2004D78B3 /* ConnectionManager.m */; };
 		38526C011A1ED9C8004D78B3 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 38526C001A1ED9C8004D78B3 /* libsqlite3.dylib */; };
 		38526C031A22AB3B004D78B3 /* MatriculaFacil.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 38526C021A22AB3B004D78B3 /* MatriculaFacil.sqlite */; };
@@ -49,6 +52,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		381A00501A23FE6100562797 /* delete_text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete_text.png; sourceTree = "<group>"; };
+		381A00521A2400CE00562797 /* loginImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginImage.png; sourceTree = "<group>"; };
+		381A00541A24021600562797 /* loginImage2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginImage2.png; sourceTree = "<group>"; };
 		38526BFC1A1ED8C2004D78B3 /* ConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionManager.h; sourceTree = "<group>"; };
 		38526BFD1A1ED8C2004D78B3 /* ConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionManager.m; sourceTree = "<group>"; };
 		38526C001A1ED9C8004D78B3 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -280,6 +286,9 @@
 		38E1C17C1A0FD652004DE581 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				381A00501A23FE6100562797 /* delete_text.png */,
+				381A00521A2400CE00562797 /* loginImage.png */,
+				381A00541A24021600562797 /* loginImage2.png */,
 				38E1C17A1A0FD1B8004DE581 /* background.png */,
 				38E1C1761A0FD056004DE581 /* student.png */,
 			);
@@ -430,11 +439,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				381A00531A2400CE00562797 /* loginImage.png in Resources */,
 				38526C031A22AB3B004D78B3 /* MatriculaFacil.sqlite in Resources */,
 				38CC9E921A06E86900CE8C52 /* Main.storyboard in Resources */,
+				381A00551A24021600562797 /* loginImage2.png in Resources */,
 				38E1C17B1A0FD1B8004DE581 /* background.png in Resources */,
 				38CC9E971A06E86900CE8C52 /* LaunchScreen.xib in Resources */,
 				38E1C1771A0FD056004DE581 /* student.png in Resources */,
+				381A00511A23FE6100562797 /* delete_text.png in Resources */,
 				38CC9E941A06E86900CE8C52 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -595,6 +607,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = MatriculaFacil/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -605,6 +618,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = MatriculaFacil/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

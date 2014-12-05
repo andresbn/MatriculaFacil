@@ -63,6 +63,39 @@
 }
 - (IBAction)ActualizarSeccion:(id)sender {
     
+    
+    manager = [[ConnectionManager alloc]init];
+    [manager LoadDB];
+    BOOL success;
+    Seccion *newSeccion = [[Seccion alloc]init];
+    newSeccion.idCurso = sec.idCurso;
+    newSeccion.codigo =CodigoTxt.text;
+    newSeccion.profesor = ProfesorTxt.text;
+    newSeccion.salon = SalonTxt.text;
+    newSeccion.inicio = InicioTxt.text;
+    newSeccion.fin = FinTxt.text;
+    newSeccion.tipo = TipoTxt.text;
+    
+    success = [manager updateSeccionWith:newSeccion];
+    
+    if (success) {
+        
+        UIAlertView *alerta = [[UIAlertView alloc ] initWithTitle:@"Confirmación" message:@"Se actualizó un registro en la base de datos" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        
+        [alerta show];
+        
+        [[NSNotificationCenter defaultCenter]
+         postNotificationName:@"reload2"
+         object:self];
+    }
+    else
+    {
+        
+        UIAlertView *alerta = [[UIAlertView alloc ] initWithTitle:@"Confirmación" message:@"No se actualizó añadir registro" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        
+        [alerta show];
+    }
+    
     [self.navigationController popViewControllerAnimated:YES];
     
 }

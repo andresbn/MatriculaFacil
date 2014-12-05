@@ -15,7 +15,7 @@
 
 @implementation LoginVC
 
-@synthesize LoginBtn,UsuarioLbl,UsuarioTxt,PasswordLbl,PasswordTxt,tap;
+@synthesize LoginBtn,UsuarioTxt,PasswordTxt,tap,image;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,6 +29,37 @@
 }
 -(void) initializeControls
 {
+    
+    [UIView animateWithDuration:0.1 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        
+        image.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1, 1);
+    } completion:^(BOOL finished) {
+        
+    }];
+    
+    
+    image.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.0, 0.0);
+    
+    [UIView animateWithDuration:0.3 delay:0.2 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        
+        image.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1, 1);
+    } completion:^(BOOL finished) {
+       
+        [UIView animateWithDuration:0.2 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+            
+            image.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1.4, 1.4);
+        } completion:^(BOOL finished) {
+            
+            [UIView animateWithDuration:0.1 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+                
+                image.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1, 1);
+            } completion:^(BOOL finished) {
+                
+            }];
+        }];
+        
+    }];
+    
     LoginBtn.layer.cornerRadius = 5;
     LoginBtn.clipsToBounds = YES;
     
@@ -42,6 +73,14 @@
     
 //    UsuarioTxt.text = @"aherrera";
 //    PasswordTxt.text = @"1234";
+    
+//    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [button setImage:[UIImage imageNamed:@"delete_text.png"] forState:UIControlStateNormal];
+//    [button setFrame:CGRectMake(0.0f, 0.0f, 16.0f, 16.0f)]; // Required for iOS7
+//    UsuarioTxt.rightView = button;
+//    UsuarioTxt.rightViewMode = UITextFieldViewModeWhileEditing;
+//    PasswordTxt.rightView = button;
+//    PasswordTxt.rightViewMode = UITextFieldViewModeWhileEditing;
 }
 - (IBAction)LoginAction:(id)sender {
     
@@ -70,10 +109,10 @@
 //        
         [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             
-            [UsuarioTxt setFrame:CGRectMake(52, 274, 217, 30)];
-            [UsuarioLbl setFrame:CGRectMake(52, 237, 79, 36)];
-            [PasswordTxt setFrame:CGRectMake(52, 341, 217, 30)];
-            [PasswordLbl setFrame:CGRectMake(52, 305, 79, 36)];
+//            [UsuarioTxt setFrame:CGRectMake(52, 274, 217, 30)];
+//            [UsuarioLbl setFrame:CGRectMake(52, 237, 79, 36)];
+//            [PasswordTxt setFrame:CGRectMake(52, 341, 217, 30)];
+//            [PasswordLbl setFrame:CGRectMake(52, 305, 79, 36)];
             
         } completion:^(BOOL finished) {
             
@@ -90,10 +129,10 @@
     
         [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             
-            [UsuarioTxt setFrame:CGRectMake(52, 204, 217, 30)];
-            [UsuarioLbl setFrame:CGRectMake(52, 167, 79, 36)];
-            [PasswordTxt setFrame:CGRectMake(52, 271, 217, 30)];
-            [PasswordLbl setFrame:CGRectMake(52, 235, 79, 36)];
+//            [UsuarioTxt setFrame:CGRectMake(52, 204, 217, 30)];
+//            [UsuarioLbl setFrame:CGRectMake(52, 167, 79, 36)];
+//            [PasswordTxt setFrame:CGRectMake(52, 271, 217, 30)];
+//            [PasswordLbl setFrame:CGRectMake(52, 235, 79, 36)];
             
         } completion:^(BOOL finished) {
             
@@ -111,10 +150,10 @@
     
     [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         
-        [UsuarioTxt setFrame:CGRectMake(52, 274, 217, 30)];
-        [UsuarioLbl setFrame:CGRectMake(52, 237, 79, 36)];
-        [PasswordTxt setFrame:CGRectMake(52, 341, 217, 30)];
-        [PasswordLbl setFrame:CGRectMake(52, 305, 79, 36)];
+//        [UsuarioTxt setFrame:CGRectMake(52, 274, 217, 30)];
+//        [UsuarioLbl setFrame:CGRectMake(52, 237, 79, 36)];
+//        [PasswordTxt setFrame:CGRectMake(52, 341, 217, 30)];
+//        [PasswordLbl setFrame:CGRectMake(52, 305, 79, 36)];
         
     } completion:^(BOOL finished) {
         

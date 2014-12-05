@@ -11,9 +11,8 @@
 @interface LoginVC : UIViewController<UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UIButton *LoginBtn;
-@property (strong, nonatomic) IBOutlet UILabel *UsuarioLbl;
 @property (strong, nonatomic) IBOutlet UITextField *UsuarioTxt;
-@property (strong, nonatomic) IBOutlet UILabel *PasswordLbl;
 @property (strong, nonatomic) IBOutlet UITextField *PasswordTxt;
 @property (strong, nonatomic) UITapGestureRecognizer *tap;
+@property (strong, nonatomic) IBOutlet UIImageView *image;
 @end
